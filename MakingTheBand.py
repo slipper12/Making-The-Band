@@ -52,17 +52,16 @@ class Band(object):
 
 
 Juno = Band()
-instrument= input("What kind of instrument do you play? ")
 
 while len(Juno.musicians) <= 4:
     print("We are hiring")
     print(" ")
     instrument=input("What instrument do you play? ").lower()
 
-    if instrument.lower() == "guitar":
+    if instrument.lower() in ["guitar", "the guitar", "acoustic guitar", "electric guitar"]:
         new_hire = Guitarist()
         Juno.hire(new_hire)
-    elif instrument.lower() == "drum":
+    elif instrument.lower() in ["drums","the drums","snare drum"]:
         new_hire = Drummer()
         Juno.hire(new_hire)
     elif instrument.lower() == "bass":
